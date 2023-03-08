@@ -1,0 +1,22 @@
+create database shop;
+
+use shop;
+
+drop table Articulos if exists;
+
+CREATE TABLE Articulos(
+	Articuloid int NOT NULL AUTO_INCREMENT,
+	Descripcion varchar(255),
+	Categoria varchar(255),
+	Precio int,
+	Cantidad int,
+	Vendidos int,
+	PRIMARY KEY (Articuloid)
+);
+
+Insert into Articulos (Descripcion, Categoria, Precio, Cantidad, Vendidos)
+VALUES ('Un libro de aventuras','Lectura',10,5,3);
+Insert into Articulos (Descripcion, Categoria, Precio, Cantidad, Vendidos)
+VALUES ('Un coche de juguete','Juguete',5,3,1);
+Insert into Articulos (Descripcion, Categoria, Precio, Cantidad, Vendidos)
+VALUES ('Un dvd de canciones infantiles','Video',15,8,4);
